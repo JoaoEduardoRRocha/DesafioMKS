@@ -120,19 +120,20 @@ $modal-border-price: rgba(191, 191, 191, 1);
   .modal-container {
     position: fixed;
     right: 0;
-    max-width: 48.6rem;
+    max-width: 100%;
     width: 100%;
     height: 100%;
-  
+    overflow-y: auto; 
+
     box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
     background-color: $modal-bg;
-  
+    
     &__header {
-      margin-top: 40rem;
-
+      margin-top: 41rem; 
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 2rem; 
     }
   
     &__header-title {
