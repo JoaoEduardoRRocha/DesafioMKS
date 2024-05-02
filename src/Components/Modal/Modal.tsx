@@ -10,32 +10,39 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ closeModal, cartItems, deleteFromCart }) => {
-  const [quantities, setQuantities] = useState<number[]>(Array(cartItems.length).fill(1));
+  const [quantities, setQuantities] = useState<number[]>([]);
   const [totalPrice, setTotalPrice] = useState<number>(0);
 
   useEffect(() => {
+    setQuantities(Array(cartItems.length).fill(1));
+  }, [cartItems]);
+
+  useEffect(() => {
     const total = cartItems.reduce((acc, item, index) => {
-      return acc + (parseFloat(item.price) * quantities[index]);
+      return acc + parseFloat(item.price) * quantities[index];
     }, 0);
     setTotalPrice(total);
-  }, [cartItems, quantities]);
+  }, [cartItems, quantities]); 
 
   const decreaseQuantity = (index: number) => {
-    const currentQuantities = [...quantities];
-    currentQuantities[index] = Math.max(1, quantities[index] - 1);
-    setQuantities(currentQuantities);
+    setQuantities(prevQuantities => {
+      const newQuantities = [...prevQuantities];
+      newQuantities[index] = Math.max(1, prevQuantities[index] - 1);
+      return newQuantities;
+    });
   };
 
   const increaseQuantity = (index: number) => {
-    const currentQuantities = [...quantities];
-    currentQuantities[index] = quantities[index] + 1;
-    setQuantities(currentQuantities);
+    setQuantities(prevQuantities => {
+      const newQuantities = [...prevQuantities];
+      newQuantities[index] = prevQuantities[index] + 1;
+      return newQuantities;
+    });
   };
 
   const btnFinish = () => {
     closeModal();
   };
-
   return (
     <div className='modal-container'>
       <div className='modal-container__header'>
