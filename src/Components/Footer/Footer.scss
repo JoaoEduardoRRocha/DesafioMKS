@@ -1,0 +1,20 @@
+$footer-bg: rgba(238, 238, 238, 1);
+
+.footer-container {
+  padding: 0.9rem 0 0.8rem 0;
+  margin-top: 17.2rem;
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: $footer-bg;
+
+  &__rights {
+    text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .footer-container {
+    margin-top: 3.5rem;
+  
+  }
+}
