@@ -1,7 +1,7 @@
 
-# Food Explorer
+# Desafio MSK Sistemas
 
-Este projeto visa colocar em prática todas as funcionalidades de uma aplicação real.
+Desafio de uma vaga de Desenvolvedor Front-end Júnior dado pela MSK Sistemas.
 
 ## Progresso do Projeto
 
@@ -13,7 +13,6 @@ Este projeto visa colocar em prática todas as funcionalidades de uma aplicaçã
 | |  | `Funcionalidades de todos os projetos: Modal, Comprar Produto, etc.`
 | |  | `Interações entre os components`
 | |  | `Estilos mobiles adicionados`
-| |  |
 
 
 
