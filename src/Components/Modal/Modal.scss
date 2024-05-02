@@ -118,18 +118,17 @@ $modal-border-price: rgba(191, 191, 191, 1);
 
 @media (max-width: 500px) {
   .modal-container {
-    position: fixed;
-    right: 0;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     width: 100%;
-    height: 100%;
     overflow-y: auto; 
-
+    height: 180%;
     box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
     background-color: $modal-bg;
     
     &__header {
-      margin-top: 41rem; 
+      margin-top: 72rem; 
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -224,9 +223,12 @@ $modal-border-price: rgba(191, 191, 191, 1);
   }
   
   .modal-container__finish {
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
     text-align: center;
-    padding: 2.6rem 0;
-    margin: auto;
+    width: 100%;
+    padding: 2rem;
     font-size: 2rem;
     font-weight: 700;
     color: $modal-light-color;
