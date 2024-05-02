@@ -116,7 +116,7 @@ $modal-border-price: rgba(191, 191, 191, 1);
   background-color: $modal-dark-bg;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 500px) {
   .modal-container {
     position: fixed;
     right: 0;
