@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./Modal.scss";
+import { motion } from 'framer-motion';
 import svgClose from '../../Assets/btnClose.svg';
 import { Product } from '../../Models/Product';
 
@@ -22,7 +23,7 @@ const Modal: React.FC<ModalProps> = ({ closeModal, cartItems, deleteFromCart }) 
       return acc + parseFloat(item.price) * quantities[index];
     }, 0);
     setTotalPrice(total);
-  }, [cartItems, quantities]); 
+  }, [cartItems, quantities]);
 
   const decreaseQuantity = (index: number) => {
     setQuantities(prevQuantities => {
@@ -44,50 +45,56 @@ const Modal: React.FC<ModalProps> = ({ closeModal, cartItems, deleteFromCart }) 
     closeModal();
   };
   return (
-    <div className='modal-container'>
-      <div className='modal-container__header'>
-        <p className='modal-container__header-title'>Carrinho de Compras</p>
+    <motion.div
+      className='modal-container'
+      initial={{ opacity: 0, y: -50 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.5 }}
+    >
+      <div className='modal-container'>
+        <div className='modal-container__header'>
+          <p className='modal-container__header-title'>Carrinho de Compras</p>
 
-        <div>
-          <img
-            className='modal-container__header-btn-close'
-            src={svgClose}
-            alt="Botão de Fechar"
-            onClick={closeModal}
-          />
-        </div>
-      </div>
-
-      {cartItems.map((item, index) => (
-        <div className='modal-container__shopping-cart' key={index}>
-          <img className='modal-container__shopping-cart__product-img' src={item.photo} alt="" />
-          <div className='modal-container__shopping-cart__product-name'>{item.name}</div>
-          <div className='modal-container__shopping-cart__product-quantify'>
-            Qtd.
-            <div className='modal-container__shopping-cart__product-quantify-border'>
-              <div className='modal-container__shopping-cart__product-quantify-minus' onClick={() => decreaseQuantity(index)}>-</div>
-              <div>| {quantities[index]} |</div>
-              <div className='modal-container__shopping-cart__product-quantify-plus' onClick={() => increaseQuantity(index)}>+</div>
-            </div>
+          <div>
+            <img
+              className='modal-container__header-btn-close'
+              src={svgClose}
+              alt="Botão de Fechar"
+              onClick={closeModal}
+            />
           </div>
-          <div className='modal-container__shopping-cart__product-price'>{item.price}</div>
-          <img
-            className='modal-container__shopping-cart__btn-close'
-            src={svgClose}
-            alt="Botão de Fechar"
-            onClick={() => deleteFromCart(index)}
-          />
         </div>
-      ))}
 
+        {cartItems.map((item, index) => (
+          <div className='modal-container__shopping-cart' key={index}>
+            <img className='modal-container__shopping-cart__product-img' src={item.photo} alt="" />
+            <div className='modal-container__shopping-cart__product-name'>{item.name}</div>
+            <div className='modal-container__shopping-cart__product-quantify'>
+              Qtd.
+              <div className='modal-container__shopping-cart__product-quantify-border'>
+                <div className='modal-container__shopping-cart__product-quantify-minus' onClick={() => decreaseQuantity(index)}>-</div>
+                <div>| {quantities[index]} |</div>
+                <div className='modal-container__shopping-cart__product-quantify-plus' onClick={() => increaseQuantity(index)}>+</div>
+              </div>
+            </div>
+            <div className='modal-container__shopping-cart__product-price'>{item.price}</div>
+            <img
+              className='modal-container__shopping-cart__btn-close'
+              src={svgClose}
+              alt="Botão de Fechar"
+              onClick={() => deleteFromCart(index)}
+            />
+          </div>
+        ))}
 
-      <div className='modal-container__total-price'>
-        <div>Total:</div>
-        <div>{totalPrice}</div>
+        <div className='modal-container__total-price'>
+          <div>Total:</div>
+          <div>{totalPrice}</div>
+          <div className='modal-container__finish' onClick={btnFinish}>Finalizar Compra</div>
+        </div>
+
       </div>
-
-      <div className='modal-container__finish' onClick={btnFinish}>Finalizar Compra</div>
-    </div>
+    </motion.div>
   );
 };
 
