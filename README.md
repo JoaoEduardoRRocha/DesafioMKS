@@ -19,7 +19,7 @@ Desafio de uma vaga de Desenvolvedor Front-end Júnior dado pela MSK Sistemas.
 
 [![Desafio](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://desafio-mks-by-joao-rocha.vercel.app/)
 
-# Desafio: 
+## Desafio: 
 [![Desafio](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MKS-desenvolvimento-de-sistemas/mks-frontend-challenge/tree/main)
 
 
