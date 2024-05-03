@@ -20,12 +20,12 @@ const Navbar: React.FC<NavbarProps> = ({ cartItems, deleteFromCart, open = false
       </div>
 
       <div className='nav-content__cart-counter'>
-        <img src={svgCart} alt="Carrinho de Compras" onClick={() => toggleModal()} />
+        <img data-testid="modal" src={svgCart} alt="Carrinho de Compras" onClick={() => toggleModal()} />
         <div className='nav-content__counter'>{cartItems.length}</div>
       </div>
 
       {open && (
-        <Modal closeModal={toggleModal} cartItems={cartItems} deleteFromCart={deleteFromCart} />
+        <Modal data-testid="modal" closeModal={toggleModal} cartItems={cartItems} deleteFromCart={deleteFromCart} />
       )}
     </nav>
   );

@@ -13,6 +13,7 @@ const Article: React.FC<ArticleProps> = ({ addToCart}) => {
     try {
       const response = await fetch('https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC');
       const data = await response.json();
+      
       setProducts(data.products);
     } catch (error) {
       console.error('Ocorreu um erro ao obter os dados dos produtos:', error);

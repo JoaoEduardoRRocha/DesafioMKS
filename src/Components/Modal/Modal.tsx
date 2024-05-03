@@ -72,9 +72,9 @@ const Modal: React.FC<ModalProps> = ({ closeModal, cartItems, deleteFromCart }) 
             <div className='modal-container__shopping-cart__product-quantify'>
               Qtd.
               <div className='modal-container__shopping-cart__product-quantify-border'>
-                <div className='modal-container__shopping-cart__product-quantify-minus' onClick={() => decreaseQuantity(index)}>-</div>
-                <div>| {quantities[index]} |</div>
-                <div className='modal-container__shopping-cart__product-quantify-plus' onClick={() => increaseQuantity(index)}>+</div>
+                <div className='modal-container__shopping-cart__product-quantify-minus' onClick={() => decreaseQuantity(index)} data-testId="decrease-quantity">-</div>
+                <div data-testId='products-quantity'>| {quantities[index]} |</div>
+                <div className='modal-container__shopping-cart__product-quantify-plus' onClick={() => increaseQuantity(index)} data-testId="increase-quantity">+</div>
               </div>
             </div>
             <div className='modal-container__shopping-cart__product-price'>{item.price}</div>
@@ -87,9 +87,9 @@ const Modal: React.FC<ModalProps> = ({ closeModal, cartItems, deleteFromCart }) 
           </div>
         ))}
 
-        <div className='modal-container__total-price'>
-          <div>Total:</div>
-          <div>{totalPrice}</div>
+        <div className='modal-container__total-price-container'>
+          <div className='modal-container__total'>Total:</div>
+          <div className='modal-container__price'>{totalPrice}</div>
           <div className='modal-container__finish' onClick={btnFinish}>Finalizar Compra</div>
         </div>
 

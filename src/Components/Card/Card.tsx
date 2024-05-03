@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({ product, addToCart }) => {
         </div>
       </div>
 
-      <button className='card-content__btn-buy' onClick={handleAddToCart}>
+      <button data-testId="button" className='card-content__btn-buy' onClick={handleAddToCart}>
         <img src={svgBag} alt="" />
         COMPRAR
       </button>
