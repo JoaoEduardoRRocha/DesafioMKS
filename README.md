@@ -19,6 +19,8 @@ Desafio de uma vaga de Desenvolvedor Front-end Júnior dado pela MSK Sistemas.
 
 [![Desafio](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://desafio-mks-by-joao-rocha.vercel.app/)
 
+Desafio: [![Desafio](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MKS-desenvolvimento-de-sistemas/mks-frontend-challenge/tree/main)
+
 
 ## Tecnologias Utilizadas
 - TypeScript
@@ -50,9 +52,7 @@ Inicie o servidor
 ```
 
 
-## 🔗 Links
-[![Desafio](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MKS-desenvolvimento-de-sistemas/mks-frontend-challenge/tree/main)
-
+## 🔗 Links Pessoais
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://joaoeduardoribeirorocha.com.br/)
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joaoedrocha/)
