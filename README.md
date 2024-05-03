@@ -11,7 +11,7 @@ Desafio de uma vaga de Desenvolvedor Front-end Júnior dado pela MSK Sistemas.
 | |  | `Criação de todos os components necessários`
 | |  | `Consumir API disponibilizada`
 | |  | `Estrutura e estilos de todos os components criados`
-| |  | `Funcionalidades de todos os projetos: Modal, Comprar Produto, etc.`
+| |  | `Funcionalidades de todo o projeto: Modal, Comprar Produto, etc.`
 | |  | `Interações entre os components`
 | |  | `Estilos mobiles adicionados`
 | |  | `Framer-Motion`
