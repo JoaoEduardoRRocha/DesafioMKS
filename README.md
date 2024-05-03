@@ -32,14 +32,7 @@ Desafio de uma vaga de Desenvolvedor Front-end Júnior dado pela MSK Sistemas.
 - Jest
 
 
-## Como rodar e utilizar localmente o projeto.
-
-```bash
-  cd Food-Explorer-Frontend
-```
-```bash
-  cd Food-Explorer-Backend
-```
+## Como rodar localmente o projeto.
 Instale as dependências
 
 ```bash
